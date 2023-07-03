@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const product = {
   name: "product",
   type: "document",
@@ -14,14 +16,22 @@ export const product = {
       type: "string",
     },
     {
+      name: "price",
+      title: "Product Price",
+      type: "number",
+    },
+    {
       name: "image",
       title: "Product Image",
-      type: "array",
-      of: [
+      type: "image",
+    },
+    {
+      name: "category",
+      title: "Product Category",
+      type: "reference",
+      to: [
         {
-          name: "img",
-          title: "Image",
-          type: "image",
+          type: "category",
         },
       ],
     },
